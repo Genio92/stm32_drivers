@@ -1,0 +1,472 @@
+21:42:52 **** Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:43:22 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:43:35 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:21:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:23:1: error: unknown type name 'define'
+   23 | define FLASH_Memory_BASE                 0x08000000UL
+      | ^~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:23:42: error: expected '=', ',', ';', 'asm' or '__attribute__' before numeric constant
+   23 | define FLASH_Memory_BASE                 0x08000000UL
+      |                                          ^~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:71:3: warning: data definition has no type or storage class
+   71 | } GPIO_TypeDef;
+      |   ^~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:71:3: warning: type defaults to 'int' in declaration of 'GPIO_TypeDef' [-Wimplicit-int]
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:43:45 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:47:31 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:48:55 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:50:24 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:50:29 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:27:1: error: unknown type name 'GPIO_PinCnfig_t'; did you mean 'GPIO_PinConfig_t'?
+   27 | GPIO_PinCnfig_t red_led;
+      | ^~~~~~~~~~~~~~~
+      | GPIO_PinConfig_t
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:52:00 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:54:17 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:28:8: error: expected '=', ',', ';', 'asm' or '__attribute__' before '->' token
+   28 | red_led->GPIO_PinNumber=GPIO_PIN_0;
+      |        ^~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:56:36 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:56:42 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:27:38: error: 'GPIO_MODE_OUTPUT_PPGPIO_SPEED_10M' undeclared here (not in a function)
+   27 | GPIO_PinConfig_t red_led={GPIO_PIN_0,GPIO_MODE_OUTPUT_PPGPIO_SPEED_10M};
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:59:37 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/GPIO" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+22:15:47 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+22:47:37 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:20:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:133:31: error: expected identifier or '(' before 'RCC_TypeDef'
+  133 | #define RCC                 ((RCC_TypeDef *)RCC_BASE)
+      |                               ^~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:30: note: in expansion of macro 'RCC'
+  151 | #define RCC_GPIOA_CLK_EN() ( RCC->APB2ENR |= (1<<2) )
+      |                              ^~~
+../Src/main.c:30:1: note: in expansion of macro 'RCC_GPIOA_CLK_EN'
+   30 | RCC_GPIOA_CLK_EN();
+      | ^~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:34:31: error: expected ')' before '(' token
+   34 | #define RCC_BASE              (Peripherals_BASE + 0x00021000UL)
+      |                               ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:133:45: note: in expansion of macro 'RCC_BASE'
+  133 | #define RCC                 ((RCC_TypeDef *)RCC_BASE)
+      |                                             ^~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:30: note: in expansion of macro 'RCC'
+  151 | #define RCC_GPIOA_CLK_EN() ( RCC->APB2ENR |= (1<<2) )
+      |                              ^~~
+../Src/main.c:30:1: note: in expansion of macro 'RCC_GPIOA_CLK_EN'
+   30 | RCC_GPIOA_CLK_EN();
+      | ^~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:33: error: expected ')' before '->' token
+  151 | #define RCC_GPIOA_CLK_EN() ( RCC->APB2ENR |= (1<<2) )
+      |                                 ^~
+../Src/main.c:30:1: note: in expansion of macro 'RCC_GPIOA_CLK_EN'
+   30 | RCC_GPIOA_CLK_EN();
+      | ^~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:47:47 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+22:48:57 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    572	      8	   1568	   2148	    864	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+22:49:16 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:20:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:133:31: error: expected identifier or '(' before 'RCC_TypeDef'
+  133 | #define RCC                 ((RCC_TypeDef *)RCC_BASE)
+      |                               ^~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:30: note: in expansion of macro 'RCC'
+  151 | #define RCC_GPIOA_CLK_EN() ( RCC->APB2ENR |= (1<<2) )
+      |                              ^~~
+../Src/main.c:32:1: note: in expansion of macro 'RCC_GPIOA_CLK_EN'
+   32 | RCC_GPIOA_CLK_EN();
+      | ^~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:34:31: error: expected ')' before '(' token
+   34 | #define RCC_BASE              (Peripherals_BASE + 0x00021000UL)
+      |                               ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:133:45: note: in expansion of macro 'RCC_BASE'
+  133 | #define RCC                 ((RCC_TypeDef *)RCC_BASE)
+      |                                             ^~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:30: note: in expansion of macro 'RCC'
+  151 | #define RCC_GPIOA_CLK_EN() ( RCC->APB2ENR |= (1<<2) )
+      |                              ^~~
+../Src/main.c:32:1: note: in expansion of macro 'RCC_GPIOA_CLK_EN'
+   32 | RCC_GPIOA_CLK_EN();
+      | ^~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:33: error: expected ')' before '->' token
+  151 | #define RCC_GPIOA_CLK_EN() ( RCC->APB2ENR |= (1<<2) )
+      |                                 ^~
+../Src/main.c:32:1: note: in expansion of macro 'RCC_GPIOA_CLK_EN'
+   32 | RCC_GPIOA_CLK_EN();
+      | ^~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:50:19 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1296	     12	   1564	   2872	    b38	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+22:56:24 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+../Src/main.c: In function 'main':
+../Src/main.c:40:36: error: invalid type argument of '->' (have 'GPIO_PinConfig_t')
+   40 |   MCAL_GPIO_WritePin(GPIOA, red_led->GPIO_PinNumber, )
+      |                                    ^~
+../Src/main.c:40:54: error: expected expression before ')' token
+   40 |   MCAL_GPIO_WritePin(GPIOA, red_led->GPIO_PinNumber, )
+      |                                                      ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:56:35 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:40:36: error: invalid type argument of '->' (have 'GPIO_PinConfig_t')
+   40 |   MCAL_GPIO_WritePin(GPIOA, red_led->GPIO_PinNumber, HIGH);
+      |                                    ^~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:59:24 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:40:37: error: invalid type argument of '->' (have 'GPIO_PinConfig_t')
+   40 |   MCAL_GPIO_WritePin(GPIOA, &red_led->GPIO_PinNumber, HIGH);
+      |                                     ^~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:59:35 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1296	     12	   1564	   2872	    b38	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+23:00:31 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:40:36: error: invalid type argument of '->' (have 'GPIO_PinConfig_t')
+   40 |   MCAL_GPIO_WritePin(GPIOA, red_led->GPIO_PinNumber, 1);
+      |                                    ^~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:00:46 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1356	     12	   1564	   2932	    b74	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+23:01:00 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-size   stm32_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1356	     12	   1564	   2932	    b74	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+23:23:26 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:61:5: error: 'Loop' undeclared (first use in this function)
+   61 |   * Loop forever */
+      |     ^~~~
+../Src/main.c:61:5: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:61:9: error: expected ';' before 'forever'
+   61 |   * Loop forever */
+      |         ^~~~~~~~
+      |         ;
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:23:40 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1348	     24	   1568	   2940	    b7c	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+23:27:17 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1464	     24	   1568	   3056	    bf0	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+23:31:04 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1544	     24	   1568	   3136	    c40	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+23:31:26 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1548	     24	   1568	   3140	    c44	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+23:31:50 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1548	     24	   1568	   3140	    c44	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+23:32:09 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1548	     24	   1568	   3140	    c44	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
