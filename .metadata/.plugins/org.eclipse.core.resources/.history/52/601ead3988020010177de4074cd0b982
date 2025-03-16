@@ -15,18 +15,10 @@
  *
  ******************************************************************************
  */
-//notes
-/*	-gwdwarf-2 ensures STM32CubeIDE generates debugging information in DWARF version 2.
-	It improves compatibility with GDB, ST-Link, and OpenOCD.
-	It reduces debugging overhead, making it ideal for embedded systems.
-	Ensures stable debugging across various toolchains.
-*/
 
 #include <stdint.h>
 #include <STM32F103x8.h>
 #include <stm32f103x8_gpio_driver.h>
-
-
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -75,7 +67,7 @@ int main(void)
 		MCAL_GPIO_WritePin(red_led_GPIO, red_led.GPIO_PinNumber, 0);
 		MCAL_GPIO_WritePin(yellow_led_GPIO, yellow_led.GPIO_PinNumber, 0);
 		MCAL_GPIO_WritePin(green_led_GPIO, green_led.GPIO_PinNumber, 1);
-		delay();
+
 	}
 	for(;;);
 }

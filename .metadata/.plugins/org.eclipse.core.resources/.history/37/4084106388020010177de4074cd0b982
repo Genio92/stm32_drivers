@@ -75,7 +75,7 @@ int main(void)
 		MCAL_GPIO_WritePin(red_led_GPIO, red_led.GPIO_PinNumber, 0);
 		MCAL_GPIO_WritePin(yellow_led_GPIO, yellow_led.GPIO_PinNumber, 0);
 		MCAL_GPIO_WritePin(green_led_GPIO, green_led.GPIO_PinNumber, 1);
-		delay();
+
 	}
 	for(;;);
 }

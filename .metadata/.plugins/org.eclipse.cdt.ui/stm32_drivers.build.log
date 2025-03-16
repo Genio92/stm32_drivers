@@ -1,4 +1,4 @@
-23:32:09 **** Incremental Build of configuration Debug for project stm32_drivers ****
+19:02:05 **** Incremental Build of configuration Debug for project stm32_drivers ****
 make -j8 all 
 arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
 arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -7,11 +7,11 @@ Finished building target: stm32_drivers.elf
 arm-none-eabi-size   stm32_drivers.elf 
 arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
    text	   data	    bss	    dec	    hex	filename
-   1548	     24	   1568	   3140	    c44	stm32_drivers.elf
+   1544	     20	   1564	   3128	    c38	stm32_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: stm32_drivers.list
  
 
-23:32:10 Build Finished. 0 errors, 0 warnings. (took 359ms)
+19:02:05 Build Finished. 0 errors, 0 warnings. (took 416ms)
 

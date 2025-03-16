@@ -369,3 +369,18 @@ java.net.UnknownHostException: download.eclipse.org
 
 !ENTRY org.eclipse.cdt.core 1 0 2025-03-15 22:15:39.790
 !MESSAGE Indexed 'stm32_drivers' (4 sources, 55 headers) in 0.128 sec: 2,037 declarations; 3,117 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.039%)
+!SESSION 2025-03-16 18:45:49.579 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-03-16 18:50:36.286
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-03-16 18:50:36.392
+!MESSAGE Log4j initialized with config file C:\Users\20100\Documents\Emmbedded system driver\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-03-16 18:50:43.941
+!MESSAGE Started RMI Server, listening on port 41337
