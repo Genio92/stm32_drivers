@@ -116,11 +116,10 @@ return 0 ;
  * Note				-Stm32F103C6 MCU has GPIO A,B,C,D,E Modules
  * 					 But LQFP48 Package has only GPIO A,B,PART of C/D exported as external PINS from the MCU
  */
-void MCAL_GPIO_Init  (GPIO_PinConfig_t* PinConfig)
+void MCAL_GPIO_Init  (GPIO_TypeDef *GPIOx , GPIO_PinConfig_t* PinConfig)
 {
 	volatile uint32_t* configregister = NULL ;
 	uint8_t	PIN_Config = 0 ;
-	GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
 
 	configregister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8) ? &GPIOx->CRL     : &GPIOx->CRH;
 
@@ -228,11 +227,9 @@ void MCAL_GPIO_DeInit    (GPIO_TypeDef *GPIOx )
  * @retval 				-The input port pin value.
  * Note					-none
  */
-uint8_t  MCAL_GPIO_ReadPin		(GPIO_PinConfig_t* PinConfig)
+uint8_t  MCAL_GPIO_ReadPin		(GPIO_TypeDef *GPIOx , uint16_t PinNumber)
 {
 	uint8_t bitstatus ;
-	GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
-	uint16_t PinNumber=PinConfig->GPIO_PinNumber;
 	if ((GPIOx->IDR & PinNumber) != (uint32_t)LOW)
 	{
 		bitstatus = HIGH;
@@ -280,9 +277,8 @@ void MCAL_GPIO_WritePort (GPIO_TypeDef *GPIOx , uint16_t Value)
  * @retval 			-none
  * Note				-none
  */
-void MCAL_GPIO_WritePin	(GPIO_PinConfig_t* PinConfig, uint8_t Value)
-{   GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
-    uint16_t PinNumber=PinConfig->GPIO_PinNumber;
+void MCAL_GPIO_WritePin	(GPIO_TypeDef *GPIOx , uint16_t PinNumber, uint8_t Value)
+{
 	if (Value != LOW)
 	{
 //		Bits 15:0 BSy: Port x Set bit y (y= 0 .. 15)
@@ -317,10 +313,8 @@ void MCAL_GPIO_WritePin	(GPIO_PinConfig_t* PinConfig, uint8_t Value)
  * @retval 			-none
  * Note				-none
  */
-void MCAL_GPIO_TogglePin		(GPIO_PinConfig_t* PinConfig)
+void MCAL_GPIO_TogglePin		(GPIO_TypeDef *GPIOx , uint16_t PinNumber)
 {
-	GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
-    uint16_t PinNumber=PinConfig->GPIO_PinNumber;
 	GPIOx->ODR ^= (PinNumber);
 }
 
@@ -332,7 +326,7 @@ void MCAL_GPIO_TogglePin		(GPIO_PinConfig_t* PinConfig)
  * @retval 			-Ok if pin Config is locked Or ERROR if pin  not locked
  * Note				-none
  */
-uint8_t MCAL_GPIO_LockPin	(GPIO_PinConfig_t* PinConfig)
+uint8_t MCAL_GPIO_LockPin	(GPIO_TypeDef *GPIOx , uint16_t PinNumber)
 {
 //	This register is used to lock the configuration of the port bits when a correct write sequence
 //	is applied to bit 16 (LCKK). The value of bits [15:0] is used to lock the configuration of the
@@ -360,12 +354,8 @@ uint8_t MCAL_GPIO_LockPin	(GPIO_PinConfig_t* PinConfig)
 //	1: Port configuration locked
 //------------------------------------------------
 
-  GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
-  uint16_t PinNumber=PinConfig->GPIO_PinNumber;
-
- //	Bit 16 LCKK[16]: Lock key
+//	Bit 16 LCKK[16]: Lock key
  volatile uint32_t tmp = 1<<16 ;
-
 
  //	Bits 15:0 LCKy: Port x Lock bit y (y= 0 .. 15)
  tmp |= PinNumber ;

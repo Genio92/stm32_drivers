@@ -32,10 +32,21 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
+#define red_led_pin GPIO_PIN_1
+#define red_led_GPIO GPIOA
 
-GPIO_PinConfig_t red_led={GPIOA,GPIO_PIN_1,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
-GPIO_PinConfig_t yellow_led={GPIOA,GPIO_PIN_2,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
-GPIO_PinConfig_t green_led={GPIOA,GPIO_PIN_3,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+#define yellow_led_pin GPIO_PIN_2
+#define yellow_led_GPIO GPIOA
+
+#define green_led_pin GPIO_PIN_3
+#define green_led_GPIO GPIOA
+
+
+
+
+GPIO_PinConfig_t red_led={red_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+GPIO_PinConfig_t yellow_led={yellow_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+GPIO_PinConfig_t green_led={green_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
 
 
 void delay(){
@@ -46,24 +57,24 @@ return;
 
 
 int main(void)
-{    RCC_GPIOA_CLK_EN();
-	 MCAL_GPIO_Init(&red_led);
-	 MCAL_GPIO_Init(&yellow_led);
-	 MCAL_GPIO_Init(&green_led);
+{   // RCC_GPIOA_CLK_EN();
+//	 MCAL_GPIO_Init(red_led_GPIO, &red_led);
+//	 MCAL_GPIO_Init(yellow_led_GPIO, &yellow_led);
+//	 MCAL_GPIO_Init(green_led_GPIO, &green_led);
 
 	 /* Loop forever */
 	while(1){
-		MCAL_GPIO_WritePin(&red_led, 1);
-		MCAL_GPIO_WritePin(&yellow_led, 0);
-		MCAL_GPIO_WritePin(&green_led, 0);
-		delay();
-		MCAL_GPIO_WritePin(&red_led, 0);
-		MCAL_GPIO_WritePin(&yellow_led, 1);
-		MCAL_GPIO_WritePin(&green_led, 0);
-		delay();
-		MCAL_GPIO_WritePin(&red_led, 0);
-		MCAL_GPIO_WritePin(&yellow_led, 0);
-		MCAL_GPIO_WritePin(&green_led, 1);
+//		MCAL_GPIO_WritePin(red_led_GPIO, red_led.GPIO_PinNumber, 1);
+//		MCAL_GPIO_WritePin(yellow_led_GPIO, yellow_led.GPIO_PinNumber, 0);
+//		MCAL_GPIO_WritePin(green_led_GPIO, green_led.GPIO_PinNumber, 0);
+//		delay();
+//		MCAL_GPIO_WritePin(red_led_GPIO, red_led.GPIO_PinNumber, 0);
+//		MCAL_GPIO_WritePin(yellow_led_GPIO, yellow_led.GPIO_PinNumber, 1);
+//		MCAL_GPIO_WritePin(green_led_GPIO, green_led.GPIO_PinNumber, 0);
+//		delay();
+//		MCAL_GPIO_WritePin(red_led_GPIO, red_led.GPIO_PinNumber, 0);
+//		MCAL_GPIO_WritePin(yellow_led_GPIO, yellow_led.GPIO_PinNumber, 0);
+//		MCAL_GPIO_WritePin(green_led_GPIO, green_led.GPIO_PinNumber, 1);
 		delay();
 	}
 	for(;;);

@@ -120,7 +120,7 @@ void MCAL_GPIO_Init  (GPIO_PinConfig_t* PinConfig)
 {
 	volatile uint32_t* configregister = NULL ;
 	uint8_t	PIN_Config = 0 ;
-	GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
+	GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
 
 	configregister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8) ? &GPIOx->CRL     : &GPIOx->CRH;
 
@@ -231,7 +231,7 @@ void MCAL_GPIO_DeInit    (GPIO_TypeDef *GPIOx )
 uint8_t  MCAL_GPIO_ReadPin		(GPIO_PinConfig_t* PinConfig)
 {
 	uint8_t bitstatus ;
-	GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
+	GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
 	uint16_t PinNumber=PinConfig->GPIO_PinNumber;
 	if ((GPIOx->IDR & PinNumber) != (uint32_t)LOW)
 	{
@@ -281,7 +281,7 @@ void MCAL_GPIO_WritePort (GPIO_TypeDef *GPIOx , uint16_t Value)
  * Note				-none
  */
 void MCAL_GPIO_WritePin	(GPIO_PinConfig_t* PinConfig, uint8_t Value)
-{   GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
+{   GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
     uint16_t PinNumber=PinConfig->GPIO_PinNumber;
 	if (Value != LOW)
 	{
@@ -319,7 +319,7 @@ void MCAL_GPIO_WritePin	(GPIO_PinConfig_t* PinConfig, uint8_t Value)
  */
 void MCAL_GPIO_TogglePin		(GPIO_PinConfig_t* PinConfig)
 {
-	GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
+	GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
     uint16_t PinNumber=PinConfig->GPIO_PinNumber;
 	GPIOx->ODR ^= (PinNumber);
 }
@@ -360,7 +360,7 @@ uint8_t MCAL_GPIO_LockPin	(GPIO_PinConfig_t* PinConfig)
 //	1: Port configuration locked
 //------------------------------------------------
 
-  GPIO_TypeDef *GPIOx= PinConfig->PIN_GPIO;
+  GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
   uint16_t PinNumber=PinConfig->GPIO_PinNumber;
 
  //	Bit 16 LCKK[16]: Lock key

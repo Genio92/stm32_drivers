@@ -63,7 +63,7 @@ int main(void)
 		delay();
 		MCAL_GPIO_WritePin(&red_led, 0);
 		MCAL_GPIO_WritePin(&yellow_led, 0);
-		MCAL_GPIO_WritePin(&green_led, 1);
+		//MCAL_GPIO_WritePin(&green_led, 1);
 		delay();
 	}
 	for(;;);

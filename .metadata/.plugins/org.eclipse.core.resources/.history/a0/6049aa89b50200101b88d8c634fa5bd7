@@ -13,9 +13,6 @@
 
 typedef struct
 {
-	GPIO_TypeDef * PIN_GPIO   ; // Specifies the pin gpio to be configured.
-									// This parameter can be a value of @ref GPIOX
-
 	uint16_t GPIO_PinNumber    ;     // Specifies the GPIO pins to be configured.
 									// This parameter can be a value of @ref GPIO_PINS_define
 
@@ -115,21 +112,21 @@ typedef struct
  * =======================================================================================
  */
 
-void MCAL_GPIO_Init      (GPIO_PinConfig_t* PinConfig);
+void MCAL_GPIO_Init      (GPIO_TypeDef *GPIOx , GPIO_PinConfig_t* PinConfig);
 void MCAL_GPIO_DeInit    (GPIO_TypeDef *GPIOx );
 
 //READ  APIs
-uint8_t  MCAL_GPIO_ReadPin		(GPIO_PinConfig_t* PinConfig);
+uint8_t  MCAL_GPIO_ReadPin		(GPIO_TypeDef *GPIOx , uint16_t PinNumber);
 uint16_t MCAL_GPIO_ReadPort		(GPIO_TypeDef *GPIOx);
 
 //WRITE  APIs
 void MCAL_GPIO_WritePort (GPIO_TypeDef *GPIOx , uint16_t Value);
-void MCAL_GPIO_WritePin	(GPIO_PinConfig_t* PinConfig, uint8_t Value);
+void MCAL_GPIO_WritePin	(GPIO_TypeDef *GPIOx , uint16_t PinNumber, uint8_t Value);
 
-void MCAL_GPIO_TogglePin		(GPIO_PinConfig_t* PinConfig);
+void MCAL_GPIO_TogglePin		(GPIO_TypeDef *GPIOx , uint16_t PinNumber);
 
 
-uint8_t MCAL_GPIO_LockPin	(GPIO_PinConfig_t* PinConfig);
+uint8_t MCAL_GPIO_LockPin	(GPIO_TypeDef *GPIOx , uint16_t PinNumber);
 
 
 

@@ -498,3 +498,208 @@ Finished building: default.size.stdout
  
 Finished building: stm32_drivers.list
  
+00:25:43 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_Init':
+In file included from ../Src/main.c:27:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:76:36: warning: initialization of 'GPIO_TypeDef *' from 'short unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   76 | #define GPIO_PIN_1                 ((uint16_t)0x0002)  /* Pin 1 selected    */
+      |                                    ^
+../Src/main.c:35:21: note: in expansion of macro 'GPIO_PIN_1'
+   35 | #define red_led_pin GPIO_PIN_1
+      |                     ^~~~~~~~~~
+../Src/main.c:47:27: note: in expansion of macro 'red_led_pin'
+   47 | GPIO_PinConfig_t red_led={red_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                           ^~~~~~~~~~~
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:123:33: error: request for member 'PIN_GPIO' in something not a structure or union
+  123 |  GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                                 ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:76:36: note: (near initialization for 'red_led.PIN_GPIO')
+   76 | #define GPIO_PIN_1                 ((uint16_t)0x0002)  /* Pin 1 selected    */
+      |                                    ^
+../Src/main.c:35:21: note: in expansion of macro 'GPIO_PIN_1'
+   35 | #define red_led_pin GPIO_PIN_1
+      |                     ^~~~~~~~~~
+../Src/main.c:47:27: note: in expansion of macro 'red_led_pin'
+   47 | GPIO_PinConfig_t red_led={red_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                           ^~~~~~~~~~~
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:234:23: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  234 |  GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                       ^~~~~~~~~~
+      |                       PinConfig
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:234:23: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:77:36: warning: initialization of 'GPIO_TypeDef *' from 'short unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   77 | #define GPIO_PIN_2                 ((uint16_t)0x0004)  /* Pin 2 selected    */
+      |                                    ^
+../Src/main.c:38:24: note: in expansion of macro 'GPIO_PIN_2'
+   38 | #define yellow_led_pin GPIO_PIN_2
+      |                        ^~~~~~~~~~
+../Src/main.c:48:30: note: in expansion of macro 'yellow_led_pin'
+   48 | GPIO_PinConfig_t yellow_led={yellow_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                              ^~~~~~~~~~~~~~
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_WritePin':
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:284:26: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  284 | {   GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                          ^~~~~~~~~~
+      |                          PinConfig
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_TogglePin':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:77:36: note: (near initialization for 'yellow_led.PIN_GPIO')
+   77 | #define GPIO_PIN_2                 ((uint16_t)0x0004)  /* Pin 2 selected    */
+      |                                    ^
+../Src/main.c:38:24: note: in expansion of macro 'GPIO_PIN_2'
+   38 | #define yellow_led_pin GPIO_PIN_2
+      |                        ^~~~~~~~~~
+../Src/main.c:48:30: note: in expansion of macro 'yellow_led_pin'
+   48 | GPIO_PinConfig_t yellow_led={yellow_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                              ^~~~~~~~~~~~~~
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:322:23: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  322 |  GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                       ^~~~~~~~~~
+      |                       PinConfig
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:78:36: warning: initialization of 'GPIO_TypeDef *' from 'short unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   78 | #define GPIO_PIN_3                 ((uint16_t)0x0008)  /* Pin 3 selected    */
+      |                                    ^
+../Src/main.c:41:23: note: in expansion of macro 'GPIO_PIN_3'
+   41 | #define green_led_pin GPIO_PIN_3
+      |                       ^~~~~~~~~~
+../Src/main.c:49:29: note: in expansion of macro 'green_led_pin'
+   49 | GPIO_PinConfig_t green_led={green_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                             ^~~~~~~~~~~~~
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:78:36: note: (near initialization for 'green_led.PIN_GPIO')
+   78 | #define GPIO_PIN_3                 ((uint16_t)0x0008)  /* Pin 3 selected    */
+      |                                    ^
+../Src/main.c:41:23: note: in expansion of macro 'GPIO_PIN_3'
+   41 | #define green_led_pin GPIO_PIN_3
+      |                       ^~~~~~~~~~
+../Src/main.c:49:29: note: in expansion of macro 'green_led_pin'
+   49 | GPIO_PinConfig_t green_led={green_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                             ^~~~~~~~~~~~~
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:363:24: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  363 |   GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                        ^~~~~~~~~~
+      |                        PinConfig
+make: *** [STM32f103c6_drivers/GPIO/subdir.mk:19: STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:26:21 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:123:33: error: request for member 'PIN_GPIO' in something not a structure or union
+  123 |  GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                                 ^
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:234:23: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  234 |  GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                       ^~~~~~~~~~
+      |                       PinConfig
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:234:23: note: each undeclared identifier is reported only once for each function it appears in
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_WritePin':
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:284:26: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  284 | {   GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                          ^~~~~~~~~~
+      |                          PinConfig
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_TogglePin':
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:322:23: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  322 |  GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                       ^~~~~~~~~~
+      |                       PinConfig
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c:363:24: error: 'PIN_Config' undeclared (first use in this function); did you mean 'PinConfig'?
+  363 |   GPIO_TypeDef *GPIOx= PIN_Config.PIN_GPIO;
+      |                        ^~~~~~~~~~
+      |                        PinConfig
+make: *** [STM32f103c6_drivers/GPIO/subdir.mk:19: STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:29:09 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    600	      8	   1568	   2176	    880	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+00:30:28 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    600	      8	   1568	   2176	    880	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+00:32:53 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:36:33: error: 'red_led_pin' undeclared here (not in a function); did you mean 'red_led'?
+   36 | GPIO_PinConfig_t red_led={GPIOA,red_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                                 ^~~~~~~~~~~
+      |                                 red_led
+../Src/main.c:37:36: error: 'yellow_led_pin' undeclared here (not in a function); did you mean 'yellow_led'?
+   37 | GPIO_PinConfig_t yellow_led={GPIOA,yellow_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                                    ^~~~~~~~~~~~~~
+      |                                    yellow_led
+../Src/main.c:38:35: error: 'green_led_pin' undeclared here (not in a function); did you mean 'green_led'?
+   38 | GPIO_PinConfig_t green_led={GPIOA,green_led_pin,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+      |                                   ^~~~~~~~~~~~~
+      |                                   green_led
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:33:48 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1356	     32	   1568	   2956	    b8c	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+00:35:43 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1492	     32	   1568	   3092	    c14	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+00:43:58 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1484	     32	   1568	   3084	    c0c	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
