@@ -703,3 +703,303 @@ Finished building: default.size.stdout
  
 Finished building: stm32_drivers.list
  
+13:42:21 **** Clean-only build of configuration Debug for project stm32_drivers ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32f103c6tx.d ./Startup/startup_stm32f103c6tx.o
+rm -rf ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d ./STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o ./STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.su
+rm -rf default.size.stdout stm32_drivers.elf stm32_drivers.list stm32_drivers.map
+ 
+13:42:21 **** Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+../Src/main.c:28:10: fatal error: lcd.h: No such file or directory
+   28 | #include <lcd.h>
+      |          ^~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:43:22 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1492	     32	   1568	   3092	    c14	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+14:11:40 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1492	     32	   1568	   3092	    c14	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+14:11:47 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+../HAL/lcd.c: In function 'LCD_GPIO_init':
+../HAL/lcd.c:23:2: error: expected declaration specifiers before 'RS_SWITCH_pin'
+   23 |  RS_SWITCH_pin.GPIO_PinNumber = RS_SWITCH;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:24:2: error: expected declaration specifiers before 'RS_SWITCH_pin'
+   24 |  RS_SWITCH_pin.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:25:2: error: expected declaration specifiers before 'RS_SWITCH_pin'
+   25 |  RS_SWITCH_pin.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:26:2: error: expected declaration specifiers before 'RS_SWITCH_pin'
+   26 |  RS_SWITCH_pin.PIN_GPIO=RS_SWITCH_GPIO;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:27:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   27 |  MCAL_GPIO_Init(&RS_SWITCH_pin);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:29:2: error: expected declaration specifiers before 'RW_SWITCH_pin'
+   29 |  RW_SWITCH_pin.GPIO_PinNumber = RW_SWITCH;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:30:2: error: expected declaration specifiers before 'RW_SWITCH_pin'
+   30 |  RW_SWITCH_pin.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:31:2: error: expected declaration specifiers before 'RW_SWITCH_pin'
+   31 |  RW_SWITCH_pin.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:32:2: error: expected declaration specifiers before 'RW_SWITCH_pin'
+   32 |  RW_SWITCH_pin.PIN_GPIO=RW_SWITCH_GPIO;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:33:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   33 |  MCAL_GPIO_Init(&RW_SWITCH_pin);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:35:2: error: expected declaration specifiers before 'EN_SWITCH_pin'
+   35 |  EN_SWITCH_pin.GPIO_PinNumber = EN_SWITCH;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:36:2: error: expected declaration specifiers before 'EN_SWITCH_pin'
+   36 |  EN_SWITCH_pin.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:37:2: error: expected declaration specifiers before 'EN_SWITCH_pin'
+   37 |  EN_SWITCH_pin.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:38:2: error: expected declaration specifiers before 'EN_SWITCH_pin'
+   38 |  EN_SWITCH_pin.PIN_GPIO=EN_SWITCH_GPIO;
+      |  ^~~~~~~~~~~~~
+../HAL/lcd.c:39:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   39 |  MCAL_GPIO_Init(&EN_SWITCH_pin);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:44:2: error: expected declaration specifiers before 'PinCfg'
+   44 |  PinCfg.PIN_GPIO=DATA_GPIO;
+      |  ^~~~~~
+../HAL/lcd.c:46:2: error: expected declaration specifiers before 'PinCfg'
+   46 |  PinCfg.GPIO_PinNumber = GPIO_PIN_0;
+      |  ^~~~~~
+../HAL/lcd.c:47:2: error: expected declaration specifiers before 'PinCfg'
+   47 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:48:2: error: expected declaration specifiers before 'PinCfg'
+   48 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:49:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   49 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:51:2: error: expected declaration specifiers before 'PinCfg'
+   51 |  PinCfg.GPIO_PinNumber = GPIO_PIN_1;
+      |  ^~~~~~
+../HAL/lcd.c:52:2: error: expected declaration specifiers before 'PinCfg'
+   52 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:53:2: error: expected declaration specifiers before 'PinCfg'
+   53 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:54:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   54 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:56:2: error: expected declaration specifiers before 'PinCfg'
+   56 |  PinCfg.GPIO_PinNumber = GPIO_PIN_2;
+      |  ^~~~~~
+../HAL/lcd.c:57:2: error: expected declaration specifiers before 'PinCfg'
+   57 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:58:2: error: expected declaration specifiers before 'PinCfg'
+   58 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:59:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   59 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:61:2: error: expected declaration specifiers before 'PinCfg'
+   61 |  PinCfg.GPIO_PinNumber = GPIO_PIN_3;
+      |  ^~~~~~
+../HAL/lcd.c:62:2: error: expected declaration specifiers before 'PinCfg'
+   62 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:63:2: error: expected declaration specifiers before 'PinCfg'
+   63 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:64:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   64 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:66:2: error: expected declaration specifiers before 'PinCfg'
+   66 |  PinCfg.GPIO_PinNumber = GPIO_PIN_4;
+      |  ^~~~~~
+../HAL/lcd.c:67:2: error: expected declaration specifiers before 'PinCfg'
+   67 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:68:2: error: expected declaration specifiers before 'PinCfg'
+   68 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:69:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   69 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:71:2: error: expected declaration specifiers before 'PinCfg'
+   71 |  PinCfg.GPIO_PinNumber = GPIO_PIN_5;
+      |  ^~~~~~
+../HAL/lcd.c:72:2: error: expected declaration specifiers before 'PinCfg'
+   72 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:73:2: error: expected declaration specifiers before 'PinCfg'
+   73 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:74:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   74 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:76:2: error: expected declaration specifiers before 'PinCfg'
+   76 |  PinCfg.GPIO_PinNumber = GPIO_PIN_6;
+      |  ^~~~~~
+../HAL/lcd.c:77:2: error: expected declaration specifiers before 'PinCfg'
+   77 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:78:2: error: expected declaration specifiers before 'PinCfg'
+   78 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:79:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   79 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:81:2: error: expected declaration specifiers before 'PinCfg'
+   81 |  PinCfg.GPIO_PinNumber = GPIO_PIN_7;
+      |  ^~~~~~
+../HAL/lcd.c:82:2: error: expected declaration specifiers before 'PinCfg'
+   82 |  PinCfg.GPIO_MODE = GPIO_MODE_OUTPUT_PP;
+      |  ^~~~~~
+../HAL/lcd.c:83:2: error: expected declaration specifiers before 'PinCfg'
+   83 |  PinCfg.GPIO_Output_Speed = GPIO_SPEED_10M;
+      |  ^~~~~~
+../HAL/lcd.c:84:2: error: expected declaration specifiers before 'MCAL_GPIO_Init'
+   84 |  MCAL_GPIO_Init(&PinCfg);
+      |  ^~~~~~~~~~~~~~
+../HAL/lcd.c:87:2: error: expected declaration specifiers before 'MCAL_GPIO_WritePin'
+   87 |  MCAL_GPIO_WritePin(&EN_SWITCH_pin, LOW);
+      |  ^~~~~~~~~~~~~~~~~~
+../HAL/lcd.c:88:2: error: expected declaration specifiers before 'MCAL_GPIO_WritePin'
+   88 |  MCAL_GPIO_WritePin(&RS_SWITCH_pin, LOW);
+      |  ^~~~~~~~~~~~~~~~~~
+../HAL/lcd.c:89:2: error: expected declaration specifiers before 'MCAL_GPIO_WritePin'
+   89 |  MCAL_GPIO_WritePin(&RW_SWITCH_pin, LOW);
+      |  ^~~~~~~~~~~~~~~~~~
+../HAL/lcd.c:91:1: error: expected declaration specifiers before '}' token
+   91 | }
+      | ^
+../HAL/lcd.c:220: error: expected '{' at end of input
+make: *** [HAL/subdir.mk:19: HAL/lcd.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:11:58 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+../HAL/lcd.c: In function 'LCD_GPIO_init':
+../HAL/lcd.c:27:17: error: incompatible type for argument 1 of 'MCAL_GPIO_Init'
+   27 |  MCAL_GPIO_Init(RS_SWITCH_pin);
+      |                 ^~~~~~~~~~~~~
+      |                 |
+      |                 GPIO_PinConfig_t
+In file included from C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/lcd.h:12,
+                 from ../HAL/lcd.c:8:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_gpio_driver.h:118:45: note: expected 'GPIO_PinConfig_t *' but argument is of type 'GPIO_PinConfig_t'
+  118 | void MCAL_GPIO_Init      (GPIO_PinConfig_t* PinConfig);
+      |                           ~~~~~~~~~~~~~~~~~~^~~~~~~~~
+make: *** [HAL/subdir.mk:19: HAL/lcd.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:12:06 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1492	     32	   1568	   3092	    c14	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+14:22:15 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+../HAL/lcd.c: In function 'LCD_check_lcd_isbusy':
+../HAL/lcd.c:170:21: error: lvalue required as unary '&' operand
+  170 |  MCAL_GPIO_WritePin(&RW_SWITCH, LOW);
+      |                     ^
+make: *** [HAL/subdir.mk:19: HAL/lcd.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:22:34 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1492	     32	   1568	   3092	    c14	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+14:29:38 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    572	      8	   1568	   2148	    864	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+14:30:55 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2236	      8	   1600	   3844	    f04	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 

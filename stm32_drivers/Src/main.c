@@ -25,7 +25,7 @@
 #include <stdint.h>
 #include <STM32F103x8.h>
 #include <stm32f103x8_gpio_driver.h>
-
+#include <lcd.h>
 
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
@@ -33,9 +33,7 @@
 #endif
 
 
-GPIO_PinConfig_t red_led={GPIOA,GPIO_PIN_1,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
-GPIO_PinConfig_t yellow_led={GPIOA,GPIO_PIN_2,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
-GPIO_PinConfig_t green_led={GPIOA,GPIO_PIN_3,GPIO_MODE_OUTPUT_PP,GPIO_SPEED_10M};
+
 
 
 void delay(){
@@ -46,25 +44,12 @@ return;
 
 
 int main(void)
-{    RCC_GPIOA_CLK_EN();
-	 MCAL_GPIO_Init(&red_led);
-	 MCAL_GPIO_Init(&yellow_led);
-	 MCAL_GPIO_Init(&green_led);
-
+{
+	LCD_INIT();
 	 /* Loop forever */
+	LCD_WRITE_STRING("hello ");
 	while(1){
-		MCAL_GPIO_WritePin(&red_led, 1);
-		MCAL_GPIO_WritePin(&yellow_led, 0);
-		MCAL_GPIO_WritePin(&green_led, 0);
-		delay();
-		MCAL_GPIO_WritePin(&red_led, 0);
-		MCAL_GPIO_WritePin(&yellow_led, 1);
-		MCAL_GPIO_WritePin(&green_led, 0);
-		delay();
-		MCAL_GPIO_WritePin(&red_led, 0);
-		MCAL_GPIO_WritePin(&yellow_led, 0);
-		MCAL_GPIO_WritePin(&green_led, 1);
-		delay();
+
 	}
 	for(;;);
 }
