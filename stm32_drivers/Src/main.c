@@ -26,6 +26,7 @@
 #include <STM32F103x8.h>
 #include <stm32f103x8_gpio_driver.h>
 #include <lcd.h>
+#include <keypad.h>
 
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
@@ -47,9 +48,16 @@ int main(void)
 {
 	LCD_INIT();
 	 /* Loop forever */
-	LCD_WRITE_STRING("hello ");
-	while(1){
+	RCC_GPIOB_CLK_EN();
+	Keypad_init();
 
+	//LCD_WRITE_STRING("hello ");
+	while(1){
+      char x=Keypad_getkey();
+      if(x!='\0'){
+    	  LCD_WRITE_CHAR(x);
+    	  delay();
+      }
 	}
 	for(;;);
 }

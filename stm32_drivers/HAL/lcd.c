@@ -1,8 +1,9 @@
 /*
- * lcd.c
+ * STM32F103x8.h
  *
- *  Created on: Mar 18, 2025
- *      Author: 20100
+ *  Created on: Apr 18, 2025
+ *      Author: Abdelrahman Mahmoud Hussein
+ *      Mastering Embedded System Online Diploma
  */
 
 #include "lcd.h"

@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../HAL/keypad.c \
 ../HAL/lcd.c 
 
 OBJS += \
+./HAL/keypad.o \
 ./HAL/lcd.o 
 
 C_DEPS += \
+./HAL/keypad.d \
 ./HAL/lcd.d 
 
 
@@ -21,7 +24,7 @@ HAL/%.o HAL/%.su: ../HAL/%.c HAL/subdir.mk
 clean: clean-HAL
 
 clean-HAL:
-	-$(RM) ./HAL/lcd.d ./HAL/lcd.o ./HAL/lcd.su
+	-$(RM) ./HAL/keypad.d ./HAL/keypad.o ./HAL/keypad.su ./HAL/lcd.d ./HAL/lcd.o ./HAL/lcd.su
 
 .PHONY: clean-HAL
 

@@ -1003,3 +1003,399 @@ Finished building: default.size.stdout
  
 Finished building: stm32_drivers.list
  
+18:33:01 **** Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2236	      8	   1600	   3844	    f04	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+18:36:53 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2236	      8	   1600	   3844	    f04	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:09:30 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+In file included from ../HAL/keypad.c:1:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   24 | char my_kepad[4][4]{
+      |                    ^
+../HAL/keypad.c: In function 'Keypad_init':
+../HAL/keypad.c:66:23: error: 'Key_padCol_pins_pins' undeclared (first use in this function); did you mean 'Key_padCol_pins'?
+   66 |   MCAL_GPIO_WritePin(&Key_padCol_pins_pins[i], HIGH);
+      |                       ^~~~~~~~~~~~~~~~~~~~
+      |                       Key_padCol_pins
+../HAL/keypad.c:66:23: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../Src/main.c:29:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   24 | char my_kepad[4][4]{
+      |                    ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [HAL/subdir.mk:22: HAL/keypad.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:09:57 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+In file included from ../Src/main.c:29:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   24 | char my_kepad[4][4]{
+      |                    ^
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../HAL/keypad.c:1:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   24 | char my_kepad[4][4]{
+      |                    ^
+make: *** [HAL/subdir.mk:22: HAL/keypad.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:10:17 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+In file included from ../HAL/keypad.c:1:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:25:17: error: expected '}' before ';' token
+   25 |  '7','8','9','%';
+      |                 ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: note: to match this '{'
+   24 | char my_kepad[4][4]={
+      |                     ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: warning: missing braces around initializer [-Wmissing-braces]
+   24 | char my_kepad[4][4]={
+      |                     ^
+   25 |  '7','8','9','%';
+      |  {          }
+In file included from ../Src/main.c:29:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:25:17: error: expected '}' before ';' token
+   25 |  '7','8','9','%';
+      |                 ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: note: to match this '{'
+   24 | char my_kepad[4][4]={
+      |                     ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: warning: missing braces around initializer [-Wmissing-braces]
+   24 | char my_kepad[4][4]={
+      |                     ^
+   25 |  '7','8','9','%';
+      |  {          }
+make: *** [HAL/subdir.mk:22: HAL/keypad.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:11:32 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+In file included from ../Src/main.c:29:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:25:5: error: expected '}' before '8'
+   25 |  '7''8''9''%',
+      |     ^~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: note: to match this '{'
+   24 | char my_kepad[4][4]={
+      |                     ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: warning: missing braces around initializer [-Wmissing-braces]
+   24 | char my_kepad[4][4]={
+      |                     ^
+   25 |  '7''8''9''%',
+      |  {
+In file included from ../HAL/keypad.c:1:
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:25:5: error: expected '}' before '8'
+   25 |  '7''8''9''%',
+      |     ^~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: note: to match this '{'
+   24 | char my_kepad[4][4]={
+      |                     ^
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24:21: warning: missing braces around initializer [-Wmissing-braces]
+   24 | char my_kepad[4][4]={
+      |                     ^
+   25 |  '7''8''9''%',
+      |  {
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [HAL/subdir.mk:22: HAL/keypad.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:12:26 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Src/main.o:C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24: multiple definition of `my_keypad'; ./HAL/keypad.o:C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:24: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: stm32_drivers.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:12:59 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2236	      8	   1600	   3844	    f04	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:13:17 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2236	      8	   1600	   3844	    f04	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:13:44 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Src/main.o:C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:35: multiple definition of `my_keypad'; ./HAL/keypad.o:C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes/keypad.h:35: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: stm32_drivers.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+19:25:22 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2236	      8	   1600	   3844	    f04	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:31:00 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2912	     24	   1664	   4600	   11f8	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:35:01 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-size   stm32_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2912	     24	   1664	   4600	   11f8	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+19:37:24 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2732	     24	   1664	   4420	   1144	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:40:18 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2352	      8	   1664	   4024	    fb8	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:41:10 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2336	      8	   1664	   4008	    fa8	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:42:49 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2352	      8	   1664	   4024	    fb8	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:43:09 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2732	     24	   1664	   4420	   1144	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:43:59 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2732	     24	   1664	   4420	   1144	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:44:26 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-size   stm32_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2732	     24	   1664	   4420	   1144	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+19:45:12 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2732	     24	   1664	   4420	   1144	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:46:31 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2764	     24	   1664	   4452	   1164	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:49:59 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2716	     24	   1664	   4404	   1134	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:54:29 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2716	     24	   1664	   4404	   1134	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+19:56:46 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2748	     24	   1664	   4436	   1154	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+20:01:08 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2808	     24	   1664	   4496	   1190	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
