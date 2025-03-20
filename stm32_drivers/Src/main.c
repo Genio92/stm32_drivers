@@ -55,8 +55,12 @@ int main(void)
 	while(1){
       char x=Keypad_getkey();
       if(x!='\0'){
+    	  if(x=='='){
+    		  LCD_clear_screen();
+    	  }
+    	  else{
     	  LCD_WRITE_CHAR(x);
-    	  delay();
+    	  }
       }
 	}
 	for(;;);

@@ -71,13 +71,15 @@ void Keypad_init() {
 
 	for (int i =0; i<=3;i++){
 		MCAL_GPIO_WritePin(&Key_padCol_pins[i], HIGH);
-
+		MCAL_GPIO_WritePin(&Key_padRow_pins[i], HIGH);
 	}
 
 }
 
 char Keypad_getkey() {
-
+	for (int i =0; i<=3;i++){
+		MCAL_GPIO_WritePin(&Key_padRow_pins[i], HIGH);
+	}
 	for (int x=0;x<=3;x++){
 		MCAL_GPIO_WritePin(&Key_padCol_pins[x], LOW);
 		MCAL_GPIO_WritePin(&Key_padCol_pins[(x+1)%4], HIGH);
