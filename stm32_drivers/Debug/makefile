@@ -12,6 +12,7 @@ RM := rm -rf
 -include Startup/subdir.mk
 -include Src/subdir.mk
 -include STM32f103c6_drivers/GPIO/subdir.mk
+-include STM32f103c6_drivers/EXT/subdir.mk
 -include HAL/subdir.mk
 -include objects.mk
 

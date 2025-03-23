@@ -1469,3 +1469,297 @@ Finished building: default.size.stdout
  
 Finished building: stm32_drivers.list
  
+21:47:44 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.d" -MT"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+In file included from C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_EXTI_driver.h:14,
+                 from ../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:9:
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'Enable_NVIC':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:198:39: error: 'NVIC_ISER0' undeclared (first use in this function)
+  198 | #define NVIC_IRQ6_EXTI0_Enable       (NVIC_ISER0 |= 1<<6)
+      |                                       ^~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:46:3: note: in expansion of macro 'NVIC_IRQ6_EXTI0_Enable'
+   46 |   NVIC_IRQ6_EXTI0_Enable ;
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:198:39: note: each undeclared identifier is reported only once for each function it appears in
+  198 | #define NVIC_IRQ6_EXTI0_Enable       (NVIC_ISER0 |= 1<<6)
+      |                                       ^~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:46:3: note: in expansion of macro 'NVIC_IRQ6_EXTI0_Enable'
+   46 |   NVIC_IRQ6_EXTI0_Enable ;
+      |   ^~~~~~~~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:204:41: error: 'NVIC_ISER1' undeclared (first use in this function)
+  204 | #define NVIC_IRQ40_EXTI10_15_Enable    (NVIC_ISER1 |= 1<<8) //40-32 = 8
+      |                                         ^~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:74:3: note: in expansion of macro 'NVIC_IRQ40_EXTI10_15_Enable'
+   74 |   NVIC_IRQ40_EXTI10_15_Enable;
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'Disable_NVIC':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:206:40: error: 'NVIC_ICER0' undeclared (first use in this function)
+  206 | #define NVIC_IRQ6_EXTI0_Disable       (NVIC_ICER0 |= 1<<6)
+      |                                        ^~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:85:4: note: in expansion of macro 'NVIC_IRQ6_EXTI0_Disable'
+   85 |    NVIC_IRQ6_EXTI0_Disable ;
+      |    ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:212:42: error: 'NVIC_ICER1' undeclared (first use in this function)
+  212 | #define NVIC_IRQ40_EXTI10_15_Disable    (NVIC_ICER1 |= 1<<8) //40-32 = 8
+      |                                          ^~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:113:4: note: in expansion of macro 'NVIC_IRQ40_EXTI10_15_Disable'
+  113 |    NVIC_IRQ40_EXTI10_15_Disable;
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'Update_EXTI':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:149:2: note: in expansion of macro 'EXTI'
+  149 |  EXTI->RTSR &= ~(1<< EXTI_Config->EXTI_PIN.ETI_InputLineNumber);
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'MCAL_EXTI_GPIO_DeInit':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:200:2: note: in expansion of macro 'EXTI'
+  200 |  EXTI->IMR = 0x00000000;
+      |  ^~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:206:40: error: 'NVIC_ICER0' undeclared (first use in this function)
+  206 | #define NVIC_IRQ6_EXTI0_Disable       (NVIC_ICER0 |= 1<<6)
+      |                                        ^~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:212:2: note: in expansion of macro 'NVIC_IRQ6_EXTI0_Disable'
+  212 |  NVIC_IRQ6_EXTI0_Disable     ;
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:212:42: error: 'NVIC_ICER1' undeclared (first use in this function)
+  212 | #define NVIC_IRQ40_EXTI10_15_Disable    (NVIC_ICER1 |= 1<<8) //40-32 = 8
+      |                                          ^~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:218:2: note: in expansion of macro 'NVIC_IRQ40_EXTI10_15_Disable'
+  218 |  NVIC_IRQ40_EXTI10_15_Disable   ;
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI0_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:264:2: note: in expansion of macro 'EXTI'
+  264 |  EXTI->PR |= 1<<0 ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI1_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:270:2: note: in expansion of macro 'EXTI'
+  270 |  EXTI->PR |=  (1<<1) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI2_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:276:2: note: in expansion of macro 'EXTI'
+  276 |  EXTI->PR |=  (1<<2) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI3_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:282:2: note: in expansion of macro 'EXTI'
+  282 |  EXTI->PR |=  (1<<3) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI4_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:288:2: note: in expansion of macro 'EXTI'
+  288 |  EXTI->PR |=  (1<<4) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI9_5_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:294:6: note: in expansion of macro 'EXTI'
+  294 |  if (EXTI->PR & 1<<5 ) { EXTI->PR |=  (1<<5)    ; GP_IRQ_CallBack[5]() ;   }
+      |      ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI15_10_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:151:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  151 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:303:6: note: in expansion of macro 'EXTI'
+  303 |  if (EXTI->PR & 1<<10 ) { EXTI->PR |=  (1<<10)    ; GP_IRQ_CallBack[10]() ;   }
+      |      ^~~~
+make: *** [STM32f103c6_drivers/EXT/subdir.mk:19: STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:49:21 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.d" -MT"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+In file included from C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_EXTI_driver.h:14,
+                 from ../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:9:
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'Update_EXTI':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:149:2: note: in expansion of macro 'EXTI'
+  149 |  EXTI->RTSR &= ~(1<< EXTI_Config->EXTI_PIN.ETI_InputLineNumber);
+      |  ^~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: note: each undeclared identifier is reported only once for each function it appears in
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:149:2: note: in expansion of macro 'EXTI'
+  149 |  EXTI->RTSR &= ~(1<< EXTI_Config->EXTI_PIN.ETI_InputLineNumber);
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'MCAL_EXTI_GPIO_DeInit':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:200:2: note: in expansion of macro 'EXTI'
+  200 |  EXTI->IMR = 0x00000000;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI0_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:264:2: note: in expansion of macro 'EXTI'
+  264 |  EXTI->PR |= 1<<0 ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI1_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:270:2: note: in expansion of macro 'EXTI'
+  270 |  EXTI->PR |=  (1<<1) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI2_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:276:2: note: in expansion of macro 'EXTI'
+  276 |  EXTI->PR |=  (1<<2) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI3_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:282:2: note: in expansion of macro 'EXTI'
+  282 |  EXTI->PR |=  (1<<3) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI4_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:288:2: note: in expansion of macro 'EXTI'
+  288 |  EXTI->PR |=  (1<<4) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI9_5_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:294:6: note: in expansion of macro 'EXTI'
+  294 |  if (EXTI->PR & 1<<5 ) { EXTI->PR |=  (1<<5)    ; GP_IRQ_CallBack[5]() ;   }
+      |      ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI15_10_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:303:6: note: in expansion of macro 'EXTI'
+  303 |  if (EXTI->PR & 1<<10 ) { EXTI->PR |=  (1<<10)    ; GP_IRQ_CallBack[10]() ;   }
+      |      ^~~~
+make: *** [STM32f103c6_drivers/EXT/subdir.mk:19: STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:49:29 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.d" -MT"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o"
+In file included from C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/stm32f103x8_EXTI_driver.h:14,
+                 from ../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:9:
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'Update_EXTI':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:149:2: note: in expansion of macro 'EXTI'
+  149 |  EXTI->RTSR &= ~(1<< EXTI_Config->EXTI_PIN.ETI_InputLineNumber);
+      |  ^~~~
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: note: each undeclared identifier is reported only once for each function it appears in
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:149:2: note: in expansion of macro 'EXTI'
+  149 |  EXTI->RTSR &= ~(1<< EXTI_Config->EXTI_PIN.ETI_InputLineNumber);
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'MCAL_EXTI_GPIO_DeInit':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:200:2: note: in expansion of macro 'EXTI'
+  200 |  EXTI->IMR = 0x00000000;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI0_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:264:2: note: in expansion of macro 'EXTI'
+  264 |  EXTI->PR |= 1<<0 ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI1_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:270:2: note: in expansion of macro 'EXTI'
+  270 |  EXTI->PR |=  (1<<1) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI2_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:276:2: note: in expansion of macro 'EXTI'
+  276 |  EXTI->PR |=  (1<<2) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI3_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:282:2: note: in expansion of macro 'EXTI'
+  282 |  EXTI->PR |=  (1<<3) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI4_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:288:2: note: in expansion of macro 'EXTI'
+  288 |  EXTI->PR |=  (1<<4) ;
+      |  ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI9_5_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:294:6: note: in expansion of macro 'EXTI'
+  294 |  if (EXTI->PR & 1<<5 ) { EXTI->PR |=  (1<<5)    ; GP_IRQ_CallBack[5]() ;   }
+      |      ^~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'EXTI15_10_IRQHandler':
+C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc/STM32F103x8.h:160:46: error: 'EXTI_BASE' undeclared (first use in this function)
+  160 | #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
+      |                                              ^~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:303:6: note: in expansion of macro 'EXTI'
+  303 |  if (EXTI->PR & 1<<10 ) { EXTI->PR |=  (1<<10)    ; GP_IRQ_CallBack[10]() ;   }
+      |      ^~~~
+make: *** [STM32f103c6_drivers/EXT/subdir.mk:19: STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:51:09 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.d" -MT"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/keypad.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/keypad.d" -MT"HAL/keypad.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/keypad.o"
+arm-none-eabi-gcc -gdwarf-2 "../HAL/lcd.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"HAL/lcd.d" -MT"HAL/lcd.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "HAL/lcd.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   3272	     24	   1720	   5016	   1398	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 

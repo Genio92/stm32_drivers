@@ -30,7 +30,7 @@
 
 //NVIC register map
 #define NVIC_Base					(0xE000E100UL)
-#define NVIC_ISER0					*(volatile uint32_t *)(NVIC_Base + 0x0 )
+#define NVIC_ISER0					*(volatile uint32_t *) (NVIC_Base + 0x0 )
 #define NVIC_ISER1					*(volatile uint32_t *)(NVIC_Base + 0x4)
 #define NVIC_ISER2					*(volatile uint32_t *)(NVIC_Base + 0x8)
 #define NVIC_ICER0					*(volatile uint32_t *)(NVIC_Base + 0x80)
@@ -58,7 +58,6 @@
 //-------
 
 #define AFIO_BASE             (Peripherals_BASE + 0x00010000UL)
-#define EXTI_BASE             (Peripherals_BASE + 0x00010400UL)
 
 
 //-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
@@ -158,7 +157,6 @@ typedef struct
 #define RCC                 ((RCC_TypeDef *)RCC_BASE)
 
 #define AFIO                ((AFIO_TypeDef *)AFIO_BASE)
-
 #define EXTI                ((EXTI_TypeDef *)EXTI_BASE)
 
 

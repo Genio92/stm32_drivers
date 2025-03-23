@@ -128,8 +128,7 @@ void Update_EXTI (EXTI_PinConfig_t* EXTI_Config)
 	//Update the GPIO Pin To Be Floating Input
 	PinCfg.GPIO_PinNumber = EXTI_Config->EXTI_PIN.GPIO_PIN;
 	PinCfg.GPIO_MODE = GPIO_MODE_INPUT_FLO ;
-	PinCfg.PIN_GPIO=EXTI_Config->EXTI_PIN.GPIO_Port;
-	MCAL_GPIO_Init(&PinCfg);
+	MCAL_GPIO_Init(EXTI_Config->EXTI_PIN.GPIO_Port , &PinCfg);
 	//==============================================
 
 	//2- UPDATE AFIO to Route between EXTI Line with PORT A,B,C,D
