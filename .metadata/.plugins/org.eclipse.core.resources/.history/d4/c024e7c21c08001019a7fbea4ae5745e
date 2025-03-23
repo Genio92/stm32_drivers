@@ -26,9 +26,7 @@
 #include <STM32F103x8.h>
 #include <stm32f103x8_gpio_driver.h>
 #include <lcd.h>
-#include <stm32f103x8_EXTI_driver.h>
 #include <keypad.h>
-
 
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)

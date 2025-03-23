@@ -2,10 +2,8 @@
  * stm32f103x8_EXTI_driver.h
  *
  *  Created on: Mar 23, 2025
- *      Author: Abdelrahman Mahmoud Hussein
- *      Mastering Embedded System Online Diploma
+ *      Author: 20100
  */
-
 
 #ifndef STM32F103X8_EXTI_DRIVER_H_
 #define STM32F103X8_EXTI_DRIVER_H_
