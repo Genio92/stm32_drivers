@@ -50,7 +50,6 @@ EXTI_PinConfig_t push_button;
 int main(void)
 {   //used Peripherals  clock enable
     RCC_GPIOA_CLK_EN();
-    RCC_GPIOB_CLK_EN();
     RCC_AFIO_CLK_EN();
     //led setup
     led.GPIO_MODE=GPIO_MODE_OUTPUT_PP;

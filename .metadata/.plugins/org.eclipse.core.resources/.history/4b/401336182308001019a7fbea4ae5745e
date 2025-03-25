@@ -38,7 +38,7 @@
 
 
 
-void my_call_back();
+void my_back();
 void delay(){
 
 for(int i=0;i<100000;i++);
@@ -48,21 +48,17 @@ GPIO_PinConfig_t led;
 EXTI_PinConfig_t push_button;
 
 int main(void)
-{   //used Peripherals  clock enable
+{   //led setup
     RCC_GPIOA_CLK_EN();
-    RCC_GPIOB_CLK_EN();
-    RCC_AFIO_CLK_EN();
-    //led setup
     led.GPIO_MODE=GPIO_MODE_OUTPUT_PP;
     led.GPIO_Output_Speed=GPIO_SPEED_10M;
     led.GPIO_PinNumber=2;
     led.PIN_GPIO=GPIOA;
     MCAL_GPIO_Init(&led);
-    MCAL_GPIO_WritePin(&led, HIGH);
     //push button setup
-    push_button.EXTI_PIN=EXTI12PB12;
-    push_button.IRQ_EN=EXTI_IRQ_Enable;
-    push_button.P_IRQ_CallBack=my_call_back;
+    push_button.EXTI_PIN=EXTI0PA0;
+    push_button.IRQ_EN=EXTI_IRQ_Enabl;
+    push_button.P_IRQ_CallBack=my_back();
     push_button.Trigger_Case=EXTI_Trigger_RISING;
     MCAL_EXTI_GPIO_Init(&push_button);
 
@@ -71,7 +67,7 @@ int main(void)
 	}
 	for(;;);
 }
-void my_call_back(){
+void my_back(){
 	MCAL_GPIO_TogglePin(&led);
 
 }

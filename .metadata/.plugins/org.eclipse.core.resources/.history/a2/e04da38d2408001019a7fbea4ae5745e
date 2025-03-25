@@ -50,7 +50,6 @@ EXTI_PinConfig_t push_button;
 int main(void)
 {   //used Peripherals  clock enable
     RCC_GPIOA_CLK_EN();
-    RCC_GPIOB_CLK_EN();
     RCC_AFIO_CLK_EN();
     //led setup
     led.GPIO_MODE=GPIO_MODE_OUTPUT_PP;
@@ -60,7 +59,7 @@ int main(void)
     MCAL_GPIO_Init(&led);
     MCAL_GPIO_WritePin(&led, HIGH);
     //push button setup
-    push_button.EXTI_PIN=EXTI12PB12;
+    push_button.EXTI_PIN=EXTI0PA0;
     push_button.IRQ_EN=EXTI_IRQ_Enable;
     push_button.P_IRQ_CallBack=my_call_back;
     push_button.Trigger_Case=EXTI_Trigger_RISING;
