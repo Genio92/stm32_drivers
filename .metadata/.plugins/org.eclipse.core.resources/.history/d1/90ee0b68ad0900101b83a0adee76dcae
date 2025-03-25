@@ -60,23 +60,23 @@ int main(void)
     MCAL_GPIO_Init(&led);
     MCAL_GPIO_WritePin(&led, HIGH);
     //push button setup
-    push_button.EXTI_PIN=EXTI12PB12;
-    push_button.IRQ_EN=EXTI_IRQ_Enable;
-    push_button.P_IRQ_CallBack=my_call_back;
-    push_button.Trigger_Case=EXTI_Trigger_RISING;
-    MCAL_EXTI_GPIO_Init(&push_button);
+   // push_button.EXTI_PIN=EXTI1PB1;
+//    push_button.IRQ_EN=EXTI_IRQ_Enable;
+//    push_button.P_IRQ_CallBack=my_call_back;
+//    push_button.Trigger_Case=EXTI_Trigger_RISING;
+//    MCAL_EXTI_GPIO_Init(&push_button);
 
 	while(1){
-//
-//		MCAL_GPIO_WritePin(&led,LOW);
-//		delay();
-//		MCAL_GPIO_WritePin(&led, HIGH);
-//		delay();
+
+		MCAL_GPIO_WritePin(&led,LOW);
+		delay();
+		MCAL_GPIO_WritePin(&led, HIGH);
+		delay();
 	}
 	for(;;);
 }
 void my_call_back(){
-	MCAL_GPIO_TogglePin(&led);
+	MCAL_GPIO_WritePin(&led,HIGH);
 
 
 }

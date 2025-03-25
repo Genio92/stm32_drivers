@@ -55,7 +55,7 @@ int main(void)
     //led setup
     led.GPIO_MODE=GPIO_MODE_OUTPUT_PP;
     led.GPIO_Output_Speed=GPIO_SPEED_10M;
-    led.GPIO_PinNumber=GPIO_PIN_2;
+    led.GPIO_PinNumber=2;
     led.PIN_GPIO=GPIOA;
     MCAL_GPIO_Init(&led);
     MCAL_GPIO_WritePin(&led, HIGH);
@@ -67,16 +67,11 @@ int main(void)
     MCAL_EXTI_GPIO_Init(&push_button);
 
 	while(1){
-//
-//		MCAL_GPIO_WritePin(&led,LOW);
-//		delay();
-//		MCAL_GPIO_WritePin(&led, HIGH);
-//		delay();
+
 	}
 	for(;;);
 }
 void my_call_back(){
 	MCAL_GPIO_TogglePin(&led);
-
 
 }

@@ -1905,3 +1905,142 @@ Finished building: default.size.stdout
  
 Finished building: stm32_drivers.list
  
+20:51:09 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2976	      8	   1656	   4640	   1220	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+20:55:01 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2988	      8	   1656	   4652	   122c	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+20:55:58 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2988	      8	   1656	   4652	   122c	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:08:47 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.d" -MT"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o"
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c: In function 'Update_EXTI':
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:129:26: error: invalid type argument of unary '*' (have 'int')
+  129 |  PinCfg.GPIO_PinNumber = *(EXTI_Config->EXTI_PIN.GPIO_PIN);
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c:131:18: error: incompatible types when assigning to type 'GPIO_TypeDef *' from type 'GPIO_TypeDef'
+  131 |  PinCfg.PIN_GPIO=*(EXTI_Config->EXTI_PIN.GPIO_Port);
+      |                  ^
+make: *** [STM32f103c6_drivers/EXT/subdir.mk:19: STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:09:59 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.d" -MT"STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32f103c6_drivers/EXT/stm32f103x8_EXTI_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2016	      8	   1632	   3656	    e48	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:11:15 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2016	      8	   1632	   3656	    e48	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:12:46 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2016	      8	   1632	   3656	    e48	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:14:42 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2936	      8	   1656	   4600	   11f8	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:16:45 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2976	      8	   1656	   4640	   1220	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 
+21:23:32 **** Incremental Build of configuration Debug for project stm32_drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/HAL/includes" -I"C:/Users/20100/Documents/Emmbedded system driver/stm32_drivers/STM32f103c6_drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "stm32_drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\20100\Documents\Emmbedded system driver\stm32_drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32_drivers.elf
+ 
+arm-none-eabi-size   stm32_drivers.elf 
+arm-none-eabi-objdump -h -S  stm32_drivers.elf  > "stm32_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2976	      8	   1656	   4640	   1220	stm32_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32_drivers.list
+ 

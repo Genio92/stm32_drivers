@@ -1455,9 +1455,9 @@ int main(void)
  8000a70:	4b11      	ldr	r3, [pc, #68]	; (8000ab8 <main+0x78>)
  8000a72:	2201      	movs	r2, #1
  8000a74:	71da      	strb	r2, [r3, #7]
-    led.GPIO_PinNumber=2;
+    led.GPIO_PinNumber=GPIO_PIN_2;
  8000a76:	4b10      	ldr	r3, [pc, #64]	; (8000ab8 <main+0x78>)
- 8000a78:	2202      	movs	r2, #2
+ 8000a78:	2204      	movs	r2, #4
  8000a7a:	809a      	strh	r2, [r3, #4]
     led.PIN_GPIO=GPIOA;
  8000a7c:	4b0e      	ldr	r3, [pc, #56]	; (8000ab8 <main+0x78>)
@@ -1502,7 +1502,8 @@ int main(void)
  8000ac8:	08000acd 	.word	0x08000acd
 
 08000acc <my_call_back>:
-
+//		MCAL_GPIO_WritePin(&led, HIGH);
+//		delay();
 	}
 	for(;;);
 }
@@ -1512,6 +1513,7 @@ void my_call_back(){
 	MCAL_GPIO_TogglePin(&led);
  8000ad0:	4802      	ldr	r0, [pc, #8]	; (8000adc <my_call_back+0x10>)
  8000ad2:	f7ff ffa0 	bl	8000a16 <MCAL_GPIO_TogglePin>
+
 
 }
  8000ad6:	bf00      	nop
